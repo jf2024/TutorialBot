@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jf2024/WondoBot.git"
+    "url": "git+https://github.com/jf2024/TutorialBot.git"
   },
   "author": "Jose Xavier Fuentes",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jf2024/WondoBot/issues"
+    "url": "https://github.com/jf2024/TutorialBot/issues"
   },
-  "homepage": "https://github.com/jf2024/WondoBot#readme",
+  "homepage": "https://github.com/jf2024/TutorialBot#readme",
   "dependencies": {
     "discord.js": "^14.7.1",
     "dotenv": "^16.0.3"
