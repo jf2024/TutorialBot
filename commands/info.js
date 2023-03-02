@@ -26,6 +26,7 @@ module.exports = {
                     `Username: ${user.username}\nID: ${user.id}`
                 );
             } else {
+                //probably don't need lines 28-32
                 await interaction.reply(
                     `Your username: ${interaction.user.username}\nYour ID: ${interaction.user.id}`
                 );

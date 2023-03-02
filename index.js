@@ -1,5 +1,5 @@
 const fs = require("node:fs"); //reads from "commands" folder/dir I created and sees command files
-const path = require("node:path");	//will get the path for those files
+const path = require("node:path"); //will get the path for those files
 const { Client, Collection, Events, GatewayIntentBits } = require("discord.js");
 const { token } = require("./config.json");
 
@@ -8,8 +8,8 @@ const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 client.commands = new Collection();
 
 //command handling
-const commandsPath = path.join(__dirname, "commands");	//just gets the path: C:\Users\xfuen\Documents\Projects\WondoBot\commands
-const commandFiles = fs	//puts each of the command files into an array
+const commandsPath = path.join(__dirname, "commands"); //just gets the path: C:\Users\xfuen\Documents\Projects\WondoBot\commands
+const commandFiles = fs //puts each of the command files into an array
     .readdirSync(commandsPath)
     .filter((file) => file.endsWith(".js"));
 
@@ -19,7 +19,7 @@ for (const file of commandFiles) {
     client.commands.set(command.data.name, command);
 }
 
-//event handling 
+//event handling
 const eventsPath = path.join(__dirname, "events");
 const eventFiles = fs
     .readdirSync(eventsPath)
@@ -37,7 +37,12 @@ for (const file of eventFiles) {
 
 client.login(token);
 
-//Below is without the event handling 
+// Can probably write a function called "handling" that does the the
+// command handling and event handling in one function
+
+//-------------------------------------------------------
+
+//Below is without the event handling
 
 // client.once(Events.ClientReady, () => {
 //     console.log("Ready!");
